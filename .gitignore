@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Model outputs
+whisper-base-lora-chinese/
+*.pt
+*.bin
+*.safetensors
+checkpoint-*/
+
+# Logs
+logs/
+*.log
+tensorboard/
+runs/
+
+# Data
+data/
+*.wav
+*.mp3
+*.flac
+*.ogg
+audio/
+dataset/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Cache
+.cache/
+*.cache
+
+# HuggingFace
+.huggingface/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
