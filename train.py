@@ -107,8 +107,10 @@ def main():
     
     model = WhisperForConditionalGeneration.from_pretrained(config.MODEL_NAME)
     
-    # Freeze the base model
+    # Prepare model for training
     model.config.use_cache = False
+    # Note: gradient_checkpointing is disabled here to avoid potential issues with LoRA
+    # If you encounter memory issues, you can enable it, but it may slow down training
     model.model.encoder.gradient_checkpointing = False
     
     # Configure LoRA
@@ -187,7 +189,7 @@ def main():
         learning_rate=config.LEARNING_RATE,
         warmup_steps=config.WARMUP_STEPS,
         num_train_epochs=config.NUM_TRAIN_EPOCHS,
-        eval_strategy="steps",
+        evaluation_strategy="steps",
         fp16=config.FP16,
         per_device_eval_batch_size=config.PER_DEVICE_EVAL_BATCH_SIZE,
         generation_max_length=config.GENERATION_MAX_LENGTH,
