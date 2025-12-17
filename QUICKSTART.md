@@ -48,7 +48,21 @@ brew install ffmpeg
 **Windows:**
 从 [ffmpeg.org](https://ffmpeg.org/download.html) 下载并安装
 
-### 5. 登录 Hugging Face
+### 5. 验证安装
+
+运行验证脚本确保所有依赖已正确安装：
+
+```bash
+python validate_setup.py
+```
+
+该脚本会检查：
+- Python 版本
+- 所有必需的 Python 包
+- ffmpeg 安装
+- CUDA 可用性（如果有 GPU）
+
+### 6. 登录 Hugging Face
 
 ```bash
 huggingface-cli login
@@ -56,7 +70,7 @@ huggingface-cli login
 
 输入您的 Hugging Face token（可以在 https://huggingface.co/settings/tokens 获取）
 
-### 6. 接受数据集条款
+### 7. 接受数据集条款
 
 访问 [Common Voice 数据集页面](https://huggingface.co/datasets/mozilla-foundation/common_voice_16_1) 并接受使用条款。
 

@@ -70,16 +70,27 @@ brew install ffmpeg
 **Windows:**
 从 [ffmpeg.org](https://ffmpeg.org/download.html) 下载并安装
 
+5. 验证安装：
+
+```bash
+python validate_setup.py
+```
+
+此脚本将检查所有依赖是否正确安装。
+
 ## 项目结构
 
 ```
 whisper_base/
 ├── README.md                 # 项目说明文档
+├── QUICKSTART.md             # 快速开始指南
 ├── requirements.txt          # 依赖库列表
 ├── config.py                 # 配置文件（模型、训练参数等）
 ├── train.py                  # 训练脚本
 ├── inference.py              # 推理脚本
 ├── prepare_data.py           # 数据准备和探索脚本
+├── example_workflow.py       # 示例工作流程脚本
+├── validate_setup.py         # 安装验证脚本
 └── whisper-base-lora-chinese/  # 训练输出目录（训练后生成）
 ```
 
